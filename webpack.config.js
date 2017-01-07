@@ -1,3 +1,4 @@
+const webpack=require('webpack');
 const path=require('path');
 
 module.exports={
@@ -7,5 +8,15 @@ module.exports={
 		//save the name as "build"
 		"path": path.resolve(__dirname, 'build'),
 		"filename": 'bundle.js'
+	},
+	module:{
+		rules:[
+			{
+				use: "babel-loader",
+				test: /\.js$/,
+				exclude: /node_modules/
+			}
+		]
+		
 	}
 }
