@@ -1,10 +1,11 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
+import './style.css';
 
 const App = ()=>{
 	return (
-		<div>React-Redux Site Boilerplate</div>
+		<div className="app">React-Redux Site Boilerplate</div>
 	);
 };
 
-ReactDom.render(<App />, document.querySelector(".container"));
+ReactDOM.render(<App />, document.querySelector(".container"));
