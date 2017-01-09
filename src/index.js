@@ -4,7 +4,7 @@ import './style.css';
 
 const App = ()=>{
 	return (
-		<div className="app">React-Redux Site Boilerplate</div>
+		<div className="app">React-Redux Si Boilerplate</div>
 	);
 };
 
