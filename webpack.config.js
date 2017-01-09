@@ -1,13 +1,17 @@
+const webpack = require('webpack');
 const path=require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports={
-	entry: './src/index.js',
+	entry: {
+		bundle: './src/index.js',
+		vendor: ['react', 'react-dom']
+	},
 	output: {
 		//must specify an absolouate path, __dirname references to current directory
 		//save the name as "build"
 		'path': path.resolve(__dirname, 'build'),
-		'filename': 'bundle.js'
+		'filename': '[name].js'
 	},
 	module:{
 		rules: [
@@ -27,6 +31,9 @@ module.exports={
 	},
 
 	plugins: [
-		new ExtractTextPlugin('style.css')
+		new ExtractTextPlugin('style.css'),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'vendor'
+		})
 	]
 };
