@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rimraf build",
     "serve": "webpack-dev-server",
-    "build": "npm run clean && webpack"
+    "build": "NODE_ENV=production npm run clean && webpack -p",
+    "deploy": "npm run build && git subtree push --prefix build origin gh-pages"
   },
   "author": "Linghong Chen",
   "license": "ISC",
