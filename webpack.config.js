@@ -10,8 +10,9 @@ module.exports={
 	output: {
 		//must specify an absolouate path, __dirname references to current directory
 		//save the name as "build"
-		'path': path.resolve(__dirname, 'build'),
-		'filename': '[name].[chunkhash].js'
+		path: path.resolve(__dirname, 'build'),
+		filename: '[name].[chunkhash].js'
+		
 	},
 	module:{
 		rules: [
@@ -26,6 +27,16 @@ module.exports={
 					fallbackLoader: 'style-loader',
 					loader: 'css-loader'
 				})				
+			},
+			{
+				test:/\.(jpe?g|png|gif)$/,
+				use:[
+					{
+						loader: 'url-loader',
+						options: {limit: 30000}
+					},
+					'image-webpack-loader'
+				]
 			}			
 		]		
 	},
@@ -37,6 +48,9 @@ module.exports={
 		}),
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
+		}),
+		new webpack.DefinePlugin({
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
 		})
 	]
 };
