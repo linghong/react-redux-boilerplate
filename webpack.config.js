@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path=require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require ('html-webpack-plugin');
+
 module.exports={
 	entry: {
 		bundle: './src/index.js',
@@ -11,8 +12,7 @@ module.exports={
 		//must specify an absolouate path, __dirname references to current directory
 		//save the name as "build"
 		path: path.resolve(__dirname, 'build'),
-		filename: '[name].[chunkhash].js'
-		
+		filename: '[name].[chunkhash].js'		
 	},
 	module:{
 		rules: [
@@ -22,18 +22,21 @@ module.exports={
 				exclude: /node_modules/
 			},
 			{
-				test: /\.css$/,
+				test: /\.css$/,			
 				loader: ExtractTextPlugin.extract({
 					fallbackLoader: 'style-loader',
 					loader: 'css-loader'
-				})				
+				})	
+			},			
+			{ 	test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, 
+				loader: "file-loader" 
 			},
 			{
-				test:/\.(jpe?g|png|gif)$/,
+				test:/\.(jpe?g|png|gif|svg|woff|woff2|ttf)$/,
 				use:[
 					{
 						loader: 'url-loader',
-						options: {limit: 30000}
+						options: {limit: 50000}
 					},
 					'image-webpack-loader'
 				]
