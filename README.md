@@ -26,12 +26,12 @@ npm run build
 
 
 ##Deploy to Github gh-pages
-npm run build
-git checkout -b gh-pages
-remove "/build" in the .gitignore
-git add .
-git commit -m "new deploy"
-npm run deploy
+$ npm run build
+$ git checkout -b gh-pages
+##### remove "/build" in the .gitignore
+$ git add .
+$ git commit -m "new deploy"
+$ npm run deploy
 
 
 ##Demo
