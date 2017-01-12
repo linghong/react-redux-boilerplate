@@ -35,7 +35,7 @@ npm run deploy
 
 
 ##Demo
-### [https://linghong.github.io/react-redux-boilerplate](https://linghong.github.io/react-redux-boilerplate)
+[https://linghong.github.io/react-redux-boilerplate](https://linghong.github.io/react-redux-boilerplate)
 
 
 ##License
