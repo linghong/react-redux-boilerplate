@@ -6,32 +6,40 @@ This ia a start boilerplate app for a react-redux site. Bootstrap css files are 
 
 
 ##Clone Repo
+```bash
 git clone https://github.com/linghong/react-redux-boilerplate.git
-
+```
 
 ##Installation
+```bash
 npm install
-
+```
 
 ##Start Dev Server
+```bash
 npm run serve
-
+```
 
 ##View the site
 localhost:8080
 
 
 ##Building A Production Version
+```bash
 npm run build
-
+```
 
 ##Deploy to Github gh-pages
+```bash
 $ npm run build
 $ git checkout -b gh-pages
+```
 ##### remove "/build" in the .gitignore
-$ git add .
+```bash
+$ git add build/
 $ git commit -m "new deploy"
 $ npm run deploy
+```
 
 
 ##Demo
