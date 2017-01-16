@@ -6,7 +6,7 @@ import ActiveItem from './containers/active_item';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
-export default var routes = (
+export default (
 	<Route path='/'component={App}>
 		<IndexRoute component={ItemList}></IndexRoute>
 		<Route path='/items/:postId' component={ActiveItem}></Route>
