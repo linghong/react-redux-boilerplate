@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style.css';
-import 'bootstrap/dist/css/bootstrap.css'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { Router, browserHistory } from 'react-router';
+import reducers from './reducers/index';
+import routes from './routes';
 
-const App = ()=>{
-	return (
-		<div className="app col-sm-offset-3 col-sm-9">React-Redux Site Boilerplate</div>
-	);
-};
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-ReactDOM.render(<App />, document.querySelector(".container"));
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <Router history={browserHistory} routes={routes} />
+  </Provider>
+  , document.querySelector('.container'));
