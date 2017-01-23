@@ -7,7 +7,7 @@ import './style.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
 export default (
-	<Route path='/'component={App}>
+	<Route path='/' component={App}>
 		<IndexRoute component={ItemList}></IndexRoute>
 		<Route path='/items/:postId' component={ActiveItem}></Route>
 	</Route>
