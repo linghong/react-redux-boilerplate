@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {fetchData, SelectItem} from '../actions/index';
-import {bindActionCreators} from 'redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchData, SelectItem } from '../actions/index';
+import { bindActionCreators } from 'redux';
+import { Link } from 'react-router';
 
 class ItemList extends Component {
 	//will call when component is about to call
@@ -11,11 +12,12 @@ class ItemList extends Component {
 	}
 
 	renderList(){
-		return this.props.items.map((item) =>{
+		console.log(this.props);
+		return this.props.items.map((item, i) =>{
 			return(
-				<div key={item.title} className="col-xs-6 col-md-3">
-				 	<a href="#" className="thumbnail" alt='{item.title}'>{item.title}
-    				</a>
+				<div key={i} className="col-xs-6 col-md-3">
+				 	<Link to={"items/"+i} className="thumbnail" alt='{item.title}'>{item.title}
+    				</Link>
 				</div>
 			);
 		});

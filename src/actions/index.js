@@ -16,7 +16,6 @@ export function fetchData(){
 }
 
 export function selectItem(item){
-	//selectImage is an ActionCreater, 
 	//An action creater is a js function which returns an action.
 	return{
 		type: 'SelectItem',

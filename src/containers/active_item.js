@@ -12,7 +12,7 @@ class ActiveItem extends Component{
 		}
 		return (
 			<a href="#" className="thumbnail col-xs-12">
-				{this.props.item.title} >
+				{this.props.params.id} 
 			</a>
 		);
 	}
