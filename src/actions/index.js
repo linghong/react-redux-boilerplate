@@ -14,11 +14,3 @@ export function fetchData(){
 		payload: request
 	};
 }
-
-export function selectItem(item){
-	//An action creater is a js function which returns an action.
-	return{
-		type: 'SelectItem',
-		payload: item
-	}
-}

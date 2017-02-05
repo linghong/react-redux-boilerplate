@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ItemList from '../containers/item_list';
-import ActiveItem from '../containers/active_item';
+import ActiveItem from '../components/active_item';
 
 export default class App extends Component {
 	render(){

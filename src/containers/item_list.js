@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchData, SelectItem } from '../actions/index';
+import { fetchData} from '../actions/index';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
 
 class ItemList extends Component {
 	//will call when component is about to call
-	// This is the best place to fetch data
+	// This is the best place for fetching data
 	componentWillMount(){
 		this.props.fetchData();
 	}
 
 	renderList(){
-		console.log(this.props);
+
 		return this.props.items.map((item, i) =>{
 			return(
 				<div key={i} className="col-xs-6 col-md-3">
