@@ -1,11 +1,9 @@
 //functions that return application states
 import { combineReducers } from 'redux';
-import Items from './reducer_items';
-import ActiveItem from './reducer_active_item';
+import ItemsReducer from './reducer_items';
 
 const rootReducer = combineReducers({
-	items: Items,
-	activeItem: ActiveItem
+	items: ItemsReducer
 });
 
 export default rootReducer;

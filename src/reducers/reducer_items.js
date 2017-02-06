@@ -1,12 +1,15 @@
-export default function(){
-	return [
-		{title: '1'},
-		{title: '2'},
-		{title: '3'},
-		{title: '4'},
-		{title: '5'},
-		{title: '6'},
-		{title: '7'},
-		{title: '8'}
-	]
+import { FETCH_DATA } from '../actions/index';
+
+const INITIAL_STATE = {
+	allItems: [],
+	activeItem: null
+};
+
+export default function(state = INITIAL_STATE, action){
+	switch(action.type){
+		case FETCH_DATA:
+			return {...state, allItems: action.payload.data};
+		default:
+			return state;
+	}
 }
