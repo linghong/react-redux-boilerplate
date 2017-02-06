@@ -22,11 +22,20 @@ npm run serve
 ##View the site
 localhost:8080
 
-
-##Build A Production Version
+##Deploy to Heroku
+step 1. install Heroku CLI in your computer. 
+step 2. open a new repository in your heroku account.
+step 2. add your heroku repo to your local repository.
+step 3. add and commit the code in your local repository and push it to your heroku master
 ```bash
-npm run build
+$ git add .
+$ git commit -am "added something new"
+$ git push heroku master
 ```
+
+##Demo
+### [https://react-redux-webpack2.herokuapp.com/](https://react-redux-webpack2.herokuapp.com/)
+
 
 ##Deploy to Github gh-pages
 ```bash
