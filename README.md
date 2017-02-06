@@ -1,7 +1,7 @@
 #React-Redux Boilerplate
 
 ##About
-This ia a start boilerplate app for a react-redux site. Bootstrap css files are used to facilitate styling the site. All images are compressed before loading, and small images are further packaged into the bundle.js file to imporve the site performance while large images are kept as external files.
+This ia a boilerplate app for a react-redux site. Bootstrap css files are used to facilitate styling the site. All images are compressed before loading, and small images are further packaged into the bundle.js file to imporve the site performance while large images are kept as external files.
 
 
 ##Clone Repo
