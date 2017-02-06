@@ -1,8 +1,7 @@
 import { FETCH_DATA } from '../actions/index';
 
 const INITIAL_STATE = {
-	allItems: [],
-	activeItem: null
+	allItems: []
 };
 
 export default function(state = INITIAL_STATE, action){

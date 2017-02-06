@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require ('html-webpack-plugin');
 module.exports={
 	entry: {
 		bundle: './src/index.js',
-		vendor: ['react', 'react-dom', 'react-router','react-redux','redux']
+		vendor: ['react', 'react-dom', 'react-router','react-redux','redux', 'redux-promise','axios','bootstrap']
 	},
 	output: {
 		//must specify an absolouate path, __dirname references to current directory

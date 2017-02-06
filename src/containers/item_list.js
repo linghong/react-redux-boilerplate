@@ -16,7 +16,7 @@ class ItemList extends Component {
 		return this.props.items.map((item, i) =>{
 			return(
 				<div key={i} className="col-xs-6 col-md-3">
-				 	<Link to={"items/"+i} className="thumbnail" alt='{item.title}'>{item.title}
+				 	<Link to={"items/"+i} className="thumbnail" alt={item.title}>{item.title}
     				</Link>
 				</div>
 			);

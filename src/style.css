@@ -25,17 +25,23 @@
 }
 
 .active-item{
-	margin-top:30px;
-	padding: 2em;
-	height: 500px;
+	margin-top:20px;
+	padding: 5%;
+	height: auto;
 	background: white;
-	opacity: 0.9;
+	opacity: 0.8;
 	text-align: center;
 }
 
 p{
 	font-size: 1.5em;
 	text-align: left;
+}
+
+.lorem-img{
+	max-width: 100% !important;
+	height: auto !important;
+	opacity: 1;
 }
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "../node_modules/bootstrap/dist/css/bootstrap-theme.css";
