@@ -27,21 +27,16 @@ module.exports={
 					fallbackLoader: 'style-loader',
 					loader: 'css-loader'
 				})	
-			},			
-			{ 	test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, 
-				loader: "file-loader" 
-			},
-			{
-				test:/\.(jpe?g|png|gif|svg|woff|woff2|ttf)$/,
-				use:[
-					{
-						loader: 'url-loader',
-						options: {limit: 50000}
-					},
-					'image-webpack-loader'
-				]
-			}			
-		]		
+			},	{
+	            test: /\.(jpe?g|png|gif|svg)$/i,
+	            loader: 'file-loader?name=image/[name].[ext]'
+	        },{ 
+	            test: /\.(woff|woff2)$/, 
+	            loader: 'url-loader?limit=10000&name=fonts/[name].[ext]' 
+	        },{ 
+	            test: /\.(ttf|eot)$/, 
+	            loader: 'file-loader?name=fonts/[name].[ext]' 
+	        }]	
 	},
 
 	plugins: [

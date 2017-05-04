@@ -19,15 +19,15 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-1": "^6.22.0",
     "css-loader": "^0.26.1",
-    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.26.0",
-    "image-webpack-loader": "^3.1.0",
+    "image-webpack-loader": "^3.3.0",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.0-rc.0",
-    "webpack-dev-server": "^2.2.0-rc.0"
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
     },
   "dependencies": {
     "axios": "^0.15.3",    
