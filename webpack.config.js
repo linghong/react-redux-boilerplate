@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require ('html-webpack-plugin');
 module.exports={
 	entry: {
 		bundle: './src/index.js',
-		vendor: ['react', 'react-dom', 'react-router','react-redux','redux', 'redux-promise','axios','bootstrap']
+		vendor: ['react', 'react-dom', 'react-router','react-redux','redux', 'redux-promise','axios','bootstrap', "jquery"]
 	},
 	output: {
 		//must specify an absolouate path, __dirname references to current directory
@@ -22,10 +22,10 @@ module.exports={
 				exclude: /node_modules/
 			},
 			{
-				test: /\.css$/,			
+				test: /\.css$/,	 		
 				loader: ExtractTextPlugin.extract({
-					fallbackLoader: 'style-loader',
-					loader: 'css-loader'
+					fallback: 'style-loader',
+					use: 'css-loader'
 				})	
 			},	{
 	            test: /\.(jpe?g|png|gif|svg)$/i,
@@ -47,6 +47,11 @@ module.exports={
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
 		}),
+		new webpack.ProvidePlugin({
+	      jQuery: "jquery",
+	      $: "jquery",
+	      jquery: "jquery"
+	    }),
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
 		})
