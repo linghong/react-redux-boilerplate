@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path=require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require ('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin'); 
 
 module.exports={
 	entry: {
@@ -11,7 +12,7 @@ module.exports={
 	output: {
 		//must specify an absolouate path, __dirname references to current directory
 		//save the name as "build"
-		path: path.resolve(__dirname, 'build'),
+		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].[chunkhash].js'		
 	},
 	module:{
@@ -44,6 +45,7 @@ module.exports={
 		new webpack.optimize.CommonsChunkPlugin({
 			names: ['vendor', 'manifest']
 		}),
+		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
 		}),
@@ -51,9 +53,6 @@ module.exports={
 	      jQuery: "jquery",
 	      $: "jquery",
 	      jquery: "jquery"
-	    }),
-		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-		})
+	    })
 	]
 };

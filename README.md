@@ -34,7 +34,6 @@ $ npm run build
 ####step 1. Install Heroku CLI in your computer. 
 ####step 2. Open a new repository in your heroku account.
 ####step 3. Add your heroku repo to your local repository.
-####step 4. For MAC environment,  remove the word 'SET' and only use "NODE_ENV=production" in the package.json file. 
 ####step 4. Add and commit the code in your local repository and push it to your heroku master
 ```bash
 $ git add .
