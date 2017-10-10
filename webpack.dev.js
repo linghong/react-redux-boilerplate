@@ -9,6 +9,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = merge(common, {
   devtool: 'inline-source-map',
    devServer: {
+   	historyApiFallback: true,
      contentBase: './dist'
    }
  });
